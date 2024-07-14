@@ -1,4 +1,4 @@
-package dev.codex.springsecurityjwt.user.Domain;
+package dev.codex.springsecurityjwt.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +16,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "roles")
-class Role {
+public class Role {
 
     @Id
     @GeneratedValue

@@ -1,6 +1,6 @@
 package dev.codex.springsecurityjwt.config;
 
-import dev.codex.springsecurityjwt.user.Domain.UserRepository;
+import dev.codex.springsecurityjwt.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

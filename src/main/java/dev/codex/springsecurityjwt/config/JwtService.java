@@ -15,15 +15,15 @@ import java.util.HashMap;
 import java.util.function.Function;
 
 @Service
-class JwtService {
+public class JwtService {
 
     @Value("${app.jwt.secret}")
-    private static String SECRET_KEY;
+    private String SECRET_KEY;
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
-    
+
     private Date getExpirationDate(final String token) {
         return extractClaim(token, Claims::getExpiration);
     }

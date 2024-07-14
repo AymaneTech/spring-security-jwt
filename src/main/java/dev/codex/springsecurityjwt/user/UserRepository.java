@@ -1,4 +1,4 @@
-package dev.codex.springsecurityjwt.user.Domain;
+package dev.codex.springsecurityjwt.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

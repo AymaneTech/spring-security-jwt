@@ -1,4 +1,4 @@
-package dev.codex.springsecurityjwt.user.Domain;
+package dev.codex.springsecurityjwt.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -31,12 +31,21 @@ public class User implements UserDetails {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(unique = true)
     private String email;
 
     private String password;
 
     @ManyToOne
     private Role role;
+
+    public User(String firstName, String lastName, String email, String password, Role role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
